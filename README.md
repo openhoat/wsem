@@ -37,10 +37,8 @@ TODO
       ...
     }
     ...
+    // Create http server and start
     httpServer = http.createServer(app);
-    // Http server creation
-    httpServer = http.createServer(app);
-    // Http server start
     httpServer.listen(3000);
 
     // Web socket server start
