@@ -101,16 +101,16 @@
 
 ## Api doc
 
-- WsEventMgr([options]) :
+* WsEventMgr([options]) :
 
     Constructor with optionnal parameters
-    - options :
-        - registerEventName : name of the 'register' web socket event (default : 'register')
-        - unregisterEventName : name of the 'unregister' web socket event (default : 'unregister')
-        - clientScriptUrl : url of the client side script to declare in html page (default : '/wsem.js')
+    * options :
+        * registerEventName : name of the 'register' web socket event (default : 'register')
+        * unregisterEventName : name of the 'unregister' web socket event (default : 'unregister')
+        * clientScriptUrl : url of the client side script to declare in html page (default : '/wsem.js')
 
 
-- WsEventMgr.start(server, [connectCallback], [disconnectCallback]) :
+* WsEventMgr.start(server, [connectCallback], [disconnectCallback]) :
     Start the wsem middleware instance
     - server : socket.io server
     - connectCallback : function to call when a new socket is created
