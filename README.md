@@ -4,7 +4,7 @@
 
   Its goal is to make web sockets apps clients synchronization easier.
 
-  It is based on [expressjs](http://expressjs.com/) and [socket.io](http://socket.io/).
+  It is based on [socket.io](http://socket.io/).
 
 ## Why wsem?
 
