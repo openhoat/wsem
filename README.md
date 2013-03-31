@@ -102,6 +102,7 @@
 ## Api
 
 - WsEventMgr([options]) :
+
       Constructor with optionnal parameters
       - options :
         - registerEventName : name of the 'register' web socket event (default : 'register')
