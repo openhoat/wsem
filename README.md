@@ -16,7 +16,7 @@ TODO
 
 ## Demo
 
-  [wsem-demo sources](https://github.com/openhoat/wsem-demo)
-  [live site](http://wsem-openhoat.rhcloud.com/)
+  - [wsem-demo sources](https://github.com/openhoat/wsem-demo)
+  - [live site](http://wsem-openhoat.rhcloud.com/)
 
 Enjoy !
