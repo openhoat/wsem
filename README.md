@@ -6,6 +6,19 @@
 
   It is based on expressjs and socket.io.
 
+## Why wsem?
+
+  Using web sockets with socket.io is powerful and quite easy for most cases.
+
+  But suppose you want your server to broadcast an event to some specified clients.
+
+  The target clients should have informed the server that they are interested with this kind of event.
+
+  The server should store sockets in a registration table, and manage it.
+
+  That's what is done in wsem : two special events (register/unregister) are managed so that you
+  just have to put wsem.on('hello', callback) in your client code.
+
 ## Usage
 
 1- Create and start http and web sockets servers as usual :
@@ -99,7 +112,7 @@
     wsem.end('todo', addTodo);
     ...
 
-## Api
+## Server api
 
 WsEventMgr([options]) :
 
@@ -158,6 +171,19 @@ Returns true if at least one client is registered for this event, else false.
 WsEventMgr.expressMiddleware :
 
 Function to use with Expressjs to route the client side wsem script
+
+
+## Client api
+
+WsEventMgr.emit(event, data) : same as emit of socket.io
+
+WsEventMgr.on(event, callback) :
+
+Send a 'register' event to the server and register a callback for this event (on method of socket.io)
+
+WsEventMgr.end(event, callback) :
+
+Unregister a callback for the specified event
 
 
 ## Demo
