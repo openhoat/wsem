@@ -109,28 +109,30 @@
         * unregisterEventName : name of the 'unregister' web socket event (default : 'unregister')
         * clientScriptUrl : url of the client side script to declare in html page (default : '/wsem.js')
 
+
+
 * WsEventMgr.start(server, [connectCallback], [disconnectCallback]) :
     Start the wsem middleware instance
-    - server : socket.io server
-    - connectCallback : function to call when a new socket is created
-    - disconnectCallback : function to call when a socket is disconnected
+    * server : socket.io server
+    * connectCallback : function to call when a new socket is created
+    * disconnectCallback : function to call when a socket is disconnected
 
 
-- WsEventMgr.addListener(event, listener) :
+* WsEventMgr.addListener(event, listener) :
     Add a listener for the specified event name.
-    - event : event name
-    - listener : callback function
-        - params : client registrations list for the specified event
+    * event : event name
+    * listener : callback function
+        * params : client registrations list for the specified event
 
 
-- WsEventMgr.removeListener(event, listener) :
+* WsEventMgr.removeListener(event, listener) :
     Remove a listener for the specified event name, with same parameters as addListener.
 
 
-- WsEventMgr.on(event, callback) :
+* WsEventMgr.on(event, callback) :
     Register a callback for event listening.
-        - event : event name
-        - callback : function to call with data
+        * event : event name
+        * callback : function to call with data
 
 
 - WsEventMgr.emit(event, data) :
