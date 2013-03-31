@@ -6,18 +6,17 @@
 
   It is based on expressjs and socket.io.
 
-## Features
-
-TODO
-
 ## Usage
 
-  On the server side (/app.js), simply code a basic web sockets app with express and socket.io :
+1- Create and start http and web sockets servers as usual :
 
-    var express = require('express')
-       , io = require('socket.io')
-       , WsEventMgr = require('wsem')
-       , httpServer, ioServer, app, wsem;
+  On server side : /app.js
+
+    var http = require('http')
+      , express = require('express')
+      , io = require('socket.io')
+      , WsEventMgr = require('wsem')
+      , httpServer, ioServer, app, wsem;
 
     app = express();
     ...
@@ -43,17 +42,43 @@ TODO
 
     // Web socket server start
     ioServer = io.listen(httpServer);
+    ...
+
+2- Then start wsem and play with events !
+
+    // Wsem start
+    wsem.start(ioServer);
+    // Hello stream example : send a 'hello' event with 'world' data every 3 seconds to registered clients
+    setInterval(function(){
+      wsem.emit('hello', 'world!');
+    }, 3000);
+
+  On client side : /static/scripts/app.js
+
+    var socket, wsem;
+    // Web socket connect
+    socket = io.connect(window.location.origin);
+    // Wsem creation
+    wsem = new WsEventMgr(socket);
+    // 'hello' event registration
+    wsem.on('hello', function (data) {
+      console.log('data :', data);
+    });
+
+## Shared todo list example :
+
+  On the server side : /app.js
 
     // Wsem start
     wsem.start(ioServer, function (socket) {
       // When a 'todo' is received from a client, we send it to all clients registered for that wsem event
+      // The registration process is managed in wsem, so that the code remains simple
       socket.on('todo', function (todo) {
-        verbose && console.log('new todo :', todo);
         wsem.emit('todo', todo);
       });
     });
 
-  On the client side (/static/scripts/app.js) :
+  On the client side : /static/scripts/app.js
 
     var socket, wsem;
 
@@ -67,7 +92,7 @@ TODO
     wsem = new WsEventMgr(socket);
     // Todo event registration
     wsem.on('todo', addTodo);
-    // We send a todo to server
+    // We send a todo to the server
     wsem.emit('todo', 'buy a bottle of milk');
     ...
     // Stop event registration
