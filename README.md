@@ -23,13 +23,17 @@
 
 1- Add dependencies to your package.json :
 
-  "dependencies": {
-    "express": "*",
-    "socket.io": "*",
-    "wsem": "*"
-  }
+    "dependencies": {
+      "express": "*",
+      "socket.io": "*",
+      "wsem": "*"
+    }
 
-2- Create and start http and web sockets servers as usual :
+2- Install dependencies :
+
+    $ npm install
+
+3- Create and start http and web sockets servers as usual :
 
   On server side : /app.js
 
