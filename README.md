@@ -102,7 +102,9 @@
 ## Api
 
 WsEventMgr([options]) :
+
 Constructor with optionnal parameters
+
     - options :
         - registerEventName : name of the 'register' web socket event (default : 'register')
         - unregisterEventName : name of the 'unregister' web socket event (default : 'unregister')
@@ -110,7 +112,9 @@ Constructor with optionnal parameters
 
 
 WsEventMgr.start(server, [connectCallback], [disconnectCallback]) :
+
 Start the wsem middleware instance
+
     - server : socket.io server
     - connectCallback : function to call when a new socket is created
     - disconnectCallback : function to call when a socket is disconnected
@@ -118,7 +122,8 @@ Start the wsem middleware instance
 
 WsEventMgr.addListener(event, listener) :
 
-  Add a listener for the specified event name.
+Add a listener for the specified event name.
+
     - event : event name
     - listener : callback function
         - params : client registrations list for the specified event
@@ -126,31 +131,33 @@ WsEventMgr.addListener(event, listener) :
 
 WsEventMgr.removeListener(event, listener) :
 
-  Remove a listener for the specified event name, with same parameters as addListener.
+Remove a listener for the specified event name, with same parameters as addListener.
 
 
 WsEventMgr.on(event, callback) :
 
-  Register a callback for event listening.
+Register a callback for event listening.
+
     - event : event name
     - callback : function to call with data
 
 
 WsEventMgr.emit(event, data) :
 
-  Send an event to registered clients
+Send an event to registered clients
+
     - event : event name
     - data : any object to send
 
 
 WsEventMgr.hasClientRegistration(event) :
 
-  Returns true if at least one client is registered for this event, else false.
+Returns true if at least one client is registered for this event, else false.
 
 
 WsEventMgr.expressMiddleware :
 
-  Function to use with Expressjs to route the client side wsem script
+Function to use with Expressjs to route the client side wsem script
 
 
 ## Demo
