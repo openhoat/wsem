@@ -14,6 +14,9 @@ TODO
 
 TODO
 
-Have a look at the demo to see how to use the api.
+## Demo
+
+  [wsem-demo sources](https://github.com/openhoat/wsem-demo)
+  [live site](http://wsem-openhoat.rhcloud.com/)
 
 Enjoy !
