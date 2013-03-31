@@ -4,11 +4,11 @@
 
   Its goal is to make web sockets apps clients synchronization easier.
 
-  It is based on expressjs and socket.io.
+  It is based on [expressjs](http://expressjs.com/) and [socket.io](http://socket.io/).
 
 ## Why wsem?
 
-  Using web sockets with socket.io is powerful and quite easy for most cases.
+  Using web sockets with [socket.io](http://socket.io/) is powerful and quite easy for most cases.
 
   But suppose you want your server to broadcast an event to some specified clients.
 
@@ -21,7 +21,15 @@
 
 ## Usage
 
-1- Create and start http and web sockets servers as usual :
+1- Add dependencies to your package.json :
+
+  "dependencies": {
+    "express": "*",
+    "socket.io": "*",
+    "wsem": "*"
+  }
+
+2- Create and start http and web sockets servers as usual :
 
   On server side : /app.js
 
@@ -57,7 +65,7 @@
     ioServer = io.listen(httpServer);
     ...
 
-2- Then start wsem and play with events !
+3- Then start wsem and play with events !
 
     // Wsem start
     wsem.start(ioServer);
