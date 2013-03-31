@@ -102,11 +102,11 @@
 ## Api
 
 - WsEventMgr([options]) :
-    Constructor with optionnal parameters
-    options :
-        - registerEventName : name of the 'register' web socket event (default : 'register')
-        - unregisterEventName : name of the 'unregister' web socket event (default : 'unregister')
-        - clientScriptUrl : url of the client side script to declare in html page (default : '/wsem.js')
+  Constructor with optionnal parameters
+  options :
+    - registerEventName : name of the 'register' web socket event (default : 'register')
+    - unregisterEventName : name of the 'unregister' web socket event (default : 'unregister')
+    - clientScriptUrl : url of the client side script to declare in html page (default : '/wsem.js')
 
 
 - WsEventMgr.start(server, [connectCallback], [disconnectCallback]) :
