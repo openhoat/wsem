@@ -110,6 +110,7 @@
         - clientScriptUrl : url of the client side script to declare in html page (default : '/wsem.js')
 
 
+
 - WsEventMgr.start(server, [connectCallback], [disconnectCallback]) :
     Start the wsem middleware instance
     - server : socket.io server
