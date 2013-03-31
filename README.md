@@ -200,7 +200,7 @@ Unregister a callback for the specified event
 
 ## Demo
 
-  - [wsem-demo sources](https://github.com/openhoat/wsem-demo)
-  - [live site](http://wsem-openhoat.rhcloud.com/)
+  - [Demo sources](https://github.com/openhoat/wsem-demo)
+  - [Live site](http://wsem-openhoat.rhcloud.com/)
 
 Enjoy !
