@@ -189,13 +189,9 @@ Function to use with Expressjs to route the client side wsem script
 
 WsEventMgr.emit(event, data) : same as emit of socket.io
 
-WsEventMgr.on(event, callback) :
+WsEventMgr.on(event, callback) : send a 'register' event to the server and register a callback for this event (on method of socket.io)
 
-Send a 'register' event to the server and register a callback for this event (on method of socket.io)
-
-WsEventMgr.end(event, callback) :
-
-Unregister a callback for the specified event
+WsEventMgr.end(event, callback) : unregister a callback for the specified event
 
 
 ## Demo
