@@ -101,7 +101,7 @@
 
 ## Api
 
-- WsEventMgr([options]) :
+WsEventMgr([options]) :
 
   Constructor with optionnal parameters
   - options :
@@ -110,7 +110,7 @@
     - clientScriptUrl : url of the client side script to declare in html page (default : '/wsem.js')
 
 
-- WsEventMgr.start(server, [connectCallback], [disconnectCallback]) :
+WsEventMgr.start(server, [connectCallback], [disconnectCallback]) :
 
   Start the wsem middleware instance
     - server : socket.io server
@@ -118,7 +118,7 @@
     - disconnectCallback : function to call when a socket is disconnected
 
 
-- WsEventMgr.addListener(event, listener) :
+WsEventMgr.addListener(event, listener) :
 
   Add a listener for the specified event name.
     - event : event name
@@ -126,31 +126,31 @@
         - params : client registrations list for the specified event
 
 
-- WsEventMgr.removeListener(event, listener) :
+WsEventMgr.removeListener(event, listener) :
 
   Remove a listener for the specified event name, with same parameters as addListener.
 
 
-- WsEventMgr.on(event, callback) :
+WsEventMgr.on(event, callback) :
 
   Register a callback for event listening.
     - event : event name
     - callback : function to call with data
 
 
-- WsEventMgr.emit(event, data) :
+WsEventMgr.emit(event, data) :
 
   Send an event to registered clients
     - event : event name
     - data : any object to send
 
 
-- WsEventMgr.hasClientRegistration(event) :
+WsEventMgr.hasClientRegistration(event) :
 
   Returns true if at least one client is registered for this event, else false.
 
 
-- WsEventMgr.expressMiddleware :
+WsEventMgr.expressMiddleware :
 
   Function to use with Expressjs to route the client side wsem script
 
