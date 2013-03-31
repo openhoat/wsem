@@ -69,7 +69,7 @@
     ioServer = io.listen(httpServer);
     ...
 
-3- Then start wsem and play with events !
+4- Then start wsem and play with events !
 
     // Wsem start
     wsem.start(ioServer);
