@@ -46,14 +46,6 @@
     app = express();
     ...
     wsem = new WsEventMgr();
-    /*
-       options = {
-         registerEventName: 'register',     // event name to use to register a wsem event
-         unregisterEventName: 'unregister', // event name to use to unregister a wsem event
-         clientScriptUrl: '/wsem.js'        // wsem client side script location
-       };
-       new WsEventMgr(options)
-    */
     ...
     app.configure('all', function () {
       ...
@@ -131,8 +123,8 @@ WsEventMgr([options]) :
 Constructor with optionnal parameters
 
     - options :
-        - registerEventName : name of the 'register' web socket event (default : 'register')
-        - unregisterEventName : name of the 'unregister' web socket event (default : 'unregister')
+        - registerEventName : name of the 'register' web socket event (default : 'wsem:register')
+        - unregisterEventName : name of the 'unregister' web socket event (default : 'wsem:unregister')
         - clientScriptUrl : url of the client side script to declare in html page (default : '/wsem.js')
 
 
