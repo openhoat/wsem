@@ -1,6 +1,6 @@
 {
   "name": "wsem",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description":"Simple module to manage events between web socket clients",
   "homepage":"https://github.com/openhoat/wsem",
   "main": "lib/wsem.js",
